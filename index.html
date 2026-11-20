@@ -108,7 +108,8 @@ h2{font-family:"Noto Serif KR",serif;font-weight:900;font-size:clamp(26px,5.2vw,
 .zone-head .no{font-family:"Noto Serif KR",serif;font-weight:900;color:var(--rose);font-size:22px}
 .zone-head h3{margin:0;font-size:20px}
 .zone-head p{margin:0;color:var(--muted);font-size:14px}
-.halls{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.halls{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.halls > .hall:last-child:nth-child(odd){grid-column:1/-1}
 .hall{background:var(--paper);border-radius:12px;padding:16px}
 .hall b{display:block;font-size:16px;margin-bottom:4px}
 .hall p{margin:0 0 8px;font-size:14px;color:var(--ink2)}
