@@ -280,6 +280,9 @@ footer b{color:#fff}
 .ph img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
 .ph figcaption{padding:12px 16px;background:var(--card);border:1px solid var(--line);border-top:0;border-radius:0 0 var(--r) var(--r);font-size:14px;color:var(--ink2)}
 .ph figcaption b{color:var(--ink);margin-right:6px}
+/* v3: 4대 구역별 마지막 사진 1장 (균일 16:9) */
+.zone-ph{margin:18px 0 0}
+.zone-ph img{aspect-ratio:16/9}
 .ph.bare img{border-radius:var(--r)}
 .ph-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px}
 @media(max-width:700px){.ph-row{grid-template-columns:1fr}}
@@ -380,7 +383,7 @@ footer b{color:#fff}
     <p class="eyebrow">Who you'll meet</p>
     <h2>현장에서 만나게 될 사람들</h2>
     <p class="lead">귀사 제품과 서비스를 직접 쓰고, 교육하고, 도입을 검토하는 사람들을 만날 수 있도록 참관객을 모집·운영할 계획입니다.</p>
-    <figure class="ph audience-ph"><img src="img/seminar.jpg" alt="교육 세미나 강연장에서 강연을 듣는 원장·강사들" loading="lazy"><figcaption><b>교육 세미나</b>현장 전문가들이 배우러 오는 자리입니다</figcaption></figure>
+    <figure class="ph audience-ph"><img src="img/demo.jpg" alt="강사가 눈썹 드로잉을 시연하고 원장들이 둘러서서 지켜보는 모습" loading="lazy"><figcaption><b>교육·실습 현장</b>전문가들이 직접 배우고 확인하러 오는 자리입니다</figcaption></figure>
     <div class="chips">
       <span class="chip">뷰티샵 원장·운영자</span>
       <span class="chip">교육자·아카데미 강사</span>
@@ -416,40 +419,33 @@ footer b{color:#fff}
           <div class="hall"><b>교육관</b><p>전문기술 교육·세미나</p><span class="fit">추천: 아카데미, 교육 콘텐츠 기업</span></div>
           <div class="hall"><b>학교관</b><p>대학 홍보·산학협력·취업 연계</p><span class="fit">추천: 대학, 산학협력단, 직업학교</span></div>
         </div>
+        <figure class="ph zone-ph"><img src="img/seminar.jpg" alt="교육 세미나 강연장에서 강연을 듣는 원장·강사들" loading="lazy"><figcaption><b>교육 세션·세미나</b>강연과 실습으로 이어지는 교육 구역</figcaption></figure>
       </div>
       <div class="zone">
         <div class="zone-head"><span class="no">02</span><h3>기술·시연 구역</h3><p>라이브 데모와 현장 체험</p></div>
-        <div class="zone-split">
-        <figure class="ph"><img src="img/ai.jpg" alt="AI 피부 분석 거울로 피부 상태를 확인하는 참관객과 상담 담당자" loading="lazy"><figcaption><b>AI 피부 분석 체험</b>참관객이 직접 써 보는 체험형 전시</figcaption></figure>
         <div class="halls">
           <div class="hall"><b>AI관</b><p>AI 미러·피부분석·이미지 생성</p><span class="fit">추천: 뷰티테크, 피부분석 기기</span></div>
           <div class="hall"><b>프로그램관</b><p>예약·CRM·매장관리</p><span class="fit">추천: 예약·POS·CRM 솔루션</span></div>
           <div class="hall"><b>제품·브랜드관</b><p>미용 제품·기자재·유통</p><span class="fit">추천: 화장품, 기자재, 유통사</span></div>
         </div>
-        </div>
+        <figure class="ph zone-ph"><img src="img/ai.jpg" alt="AI 피부 분석 거울로 피부 상태를 확인하는 참관객과 상담 담당자" loading="lazy"><figcaption><b>AI 피부 분석 체험</b>참관객이 직접 써 보는 체험형 전시</figcaption></figure>
       </div>
       <div class="zone">
         <div class="zone-head"><span class="no">03</span><h3>창업 구역</h3><p>창업부터 매장 운영까지</p></div>
-        <div class="zone-split rev">
         <div class="halls">
           <div class="hall"><b>창업관</b><p>창업 상담·상권분석·사업 운영</p><span class="fit">추천: 창업 컨설팅, 프랜차이즈</span></div>
           <div class="hall"><b>마케팅관</b><p>SNS·브랜딩·홍보 솔루션</p><span class="fit">추천: 마케팅 대행, 플랫폼</span></div>
           <div class="hall"><b>정부지원관</b><p>지원사업·정책자금 정보 안내</p><span class="fit">추천: 지원기관, 정책자금 컨설팅</span></div>
           <div class="hall"><b>전문상담관</b><p>세무·노무·금융·컨설팅</p><span class="fit">추천: 세무·노무사, 금융기관</span></div>
         </div>
-        <figure class="ph"><img src="img/startup.jpg" alt="부스 도면과 자재 샘플을 펼쳐 놓고 창업·매장 운영을 상담하는 모습" loading="lazy"><figcaption><b>창업·매장 상담</b>도면과 자재 샘플을 보며 오픈 준비까지</figcaption></figure>
-        </div>
+        <figure class="ph zone-ph"><img src="img/startup.jpg" alt="부스 도면과 자재 샘플을 펼쳐 놓고 창업·매장 운영을 상담하는 모습" loading="lazy"><figcaption><b>창업·매장 상담</b>도면과 자재 샘플을 보며 오픈 준비까지</figcaption></figure>
       </div>
       <div class="zone">
         <div class="zone-head"><span class="no">04</span><h3>네트워킹 구역</h3><p>비즈니스 매칭과 파트너십</p></div>
-        <div class="ph-row three">
-          <figure class="ph"><img src="img/b2b.jpg" alt="명함을 주고받으며 비즈니스 파트너십을 논의하는 참가자들" loading="lazy"><figcaption><b>B2B 비즈매칭</b>명함을 주고받으며 파트너십 논의</figcaption></figure>
-          <figure class="ph"><img src="img/device.jpg" alt="장비 업체 담당자가 태블릿으로 기기 사양을 설명하는 모습" loading="lazy"><figcaption><b>장비·기기 상담</b>태블릿으로 사양을 짚어 가며 1:1 설명</figcaption></figure>
-          <figure class="ph"><img src="img/product.jpg" alt="제품 업체 담당자가 원장들과 마주 앉아 제품을 상담하는 모습" loading="lazy"><figcaption><b>제품·화장품 상담</b>마주 앉아 거래 조건까지</figcaption></figure>
-        </div>
         <div class="halls">
           <div class="hall"><b>B2B 비즈매칭관</b><p>기업·교육기관·전문가 1:1 상담, 협력 MOU</p><span class="fit">추천: 거래처·파트너를 찾는 모든 기업</span></div>
         </div>
+        <figure class="ph zone-ph"><img src="img/b2b.jpg" alt="명함을 주고받으며 비즈니스 파트너십을 논의하는 참가자들" loading="lazy"><figcaption><b>B2B 비즈매칭</b>명함을 주고받으며 파트너십 논의</figcaption></figure>
       </div>
     </div>
   </div>
@@ -461,7 +457,10 @@ footer b{color:#fff}
     <p class="eyebrow">How to participate</p>
     <h2>목적에 맞는 참가 방식</h2>
     <p class="lead">부스만이 아닙니다. 귀사 목표에 맞춰 하나 또는 여러 방식을 조합할 수 있습니다.</p>
-    <figure class="ph ph-wide"><img src="img/demo.jpg" alt="강사가 눈썹 드로잉을 시연하고 원장들이 둘러서서 지켜보는 모습" loading="lazy"><figcaption><b>시연 관람형 · 실습 교육형</b>바로 앞에서 보는 시연, 소그룹으로 직접 해 보는 실습</figcaption></figure>
+    <div class="ph-row">
+      <figure class="ph"><img src="img/device.jpg" alt="장비 업체 담당자가 태블릿으로 기기 사양을 설명하는 모습" loading="lazy"><figcaption><b>기기·장비 시연 상담</b>사양과 시연을 직접 확인하고 현장에서 상담합니다</figcaption></figure>
+      <figure class="ph"><img src="img/product.jpg" alt="제품 업체 담당자가 원장들과 마주 앉아 제품을 상담하는 모습" loading="lazy"><figcaption><b>제품·화장품 상담</b>마주 앉아 거래 조건까지 상담합니다</figcaption></figure>
+    </div>
     <div class="modes">
       <div class="mode"><span class="k">BOOTH</span><h3>전시부스</h3><p>제품·서비스 소개와 현장 상담</p></div>
       <div class="mode"><span class="k">DEMO</span><h3>체험·시연</h3><p>AI 기술, 소프트웨어, 장비를 직접 시연</p></div>
