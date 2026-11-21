@@ -117,7 +117,8 @@ h2{font-family:"Noto Serif KR",serif;font-weight:900;font-size:clamp(26px,5.2vw,
 .zone-head h3{margin:0;font-size:20px}
 .zone-head p{margin:0;color:var(--muted);font-size:14px}
 .halls{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.halls > .hall:last-child:nth-child(odd){grid-column:1/-1}
+/* v3: 3개·4개 전문관이 한 줄에 고르게 놓이도록 (auto-fit이 빈 칸 처리) */
+.halls{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
 .hall{background:var(--paper);border-radius:12px;padding:16px}
 .hall b{display:block;font-size:16px;margin-bottom:4px}
 .hall p{margin:0 0 8px;font-size:14px;color:var(--ink2)}
@@ -282,7 +283,7 @@ footer b{color:#fff}
 .ph figcaption b{color:var(--ink);margin-right:6px}
 /* v3: 4대 구역별 마지막 사진 1장 (균일 16:9) */
 .zone-ph{margin:18px 0 0}
-.zone-ph img{aspect-ratio:16/9}
+.zone-ph img{aspect-ratio:16/9;max-height:420px}
 .ph.bare img{border-radius:var(--r)}
 .ph-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px}
 @media(max-width:700px){.ph-row{grid-template-columns:1fr}}
