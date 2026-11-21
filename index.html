@@ -821,8 +821,9 @@ footer b{color:#fff}
 
   /* ---------------- 서버 연동(옵션) ---------------- */
   // Google Apps Script 웹 앱으로 전송합니다.
-  // Apps Script 응답은 CORS 헤더가 없어 브라우저에서 내용을 읽을 수 없으므로,
-  // preflight가 없는 text/plain 단순 요청 + no-cors로 보내고 '요청이 나갔는지'로 성공을 판단합니다.
+  // Apps Script 응답은 CORS 헤더가 없어 브라우저에서 내용을 읽을 수 없고, 리다이렉트 응답이 끝나지 않는 경우도 있어
+  // 응답을 기다리지 않는 navigator.sendBeacon을 먼저 씁니다(큐에 들어가면 true).
+  // sendBeacon이 없거나 거부하면 fetch를 쓰고, 6초 뒤에는 '전송됨'으로 처리합니다.
   // (서버에서 기록/메일 발송에 실패하면 담당자 메일로 오류 알림이 따로 갑니다.)
   function sendToServer(v, text) {
     var body = {};
@@ -830,16 +831,29 @@ footer b{color:#fff}
     body.summary = text;
     body.page = location.href;
     body.sentAt = new Date().toISOString();
-    return fetch(SEND_ENDPOINT, {
-      method: "POST",
-      mode: "no-cors",
-      keepalive: true,
-      headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body: JSON.stringify(body)
-    }).then(function () {
-      return true;
-    }).catch(function () {
-      return false;
+    var payload = JSON.stringify(body);
+
+    try {
+      if (navigator.sendBeacon) {
+        var blob = new Blob([payload], { type: "text/plain;charset=utf-8" });
+        if (navigator.sendBeacon(SEND_ENDPOINT, blob)) { return Promise.resolve(true); }
+      }
+    } catch (e) { /* 아래 fetch로 넘어갑니다 */ }
+
+    return new Promise(function (resolve) {
+      var done = false;
+      var timer = setTimeout(function () { if (!done) { done = true; resolve(true); } }, 6000);
+      fetch(SEND_ENDPOINT, {
+        method: "POST",
+        mode: "no-cors",
+        keepalive: true,
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: payload
+      }).then(function () {
+        if (!done) { done = true; clearTimeout(timer); resolve(true); }
+      }).catch(function () {
+        if (!done) { done = true; clearTimeout(timer); resolve(false); }
+      });
     });
   }
 
