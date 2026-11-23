@@ -5,7 +5,7 @@
 - 랜딩페이지: https://pungcle33-lab.github.io/gkeb-expo-2027/
 - 부스 안내서(PDF): https://pungcle33-lab.github.io/gkeb-expo-2027/booth-guide.pdf
 
-문의: 이주은 이사 · 010-2618-7083 · pungcle33@gmail.com
+문의: 운영회장 이다늬 · 010-6305-7845 · pungcle33@gmail.com
 
 ## 참가 문의 자동 접수 (구글 시트 + 메일 알림)
 
