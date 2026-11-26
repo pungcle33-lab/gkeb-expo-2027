@@ -3,7 +3,8 @@
 2027년 5월 20일~22일 대구 EXCO(엑스코)에서 열리는 GKEB 뷰티 교육·비즈니스 박람회의 기업 참가 안내 랜딩페이지입니다.
 
 - 랜딩페이지: https://pungcle33-lab.github.io/gkeb-expo-2027/
-- 부스 안내서(PDF): https://pungcle33-lab.github.io/gkeb-expo-2027/booth-guide.pdf
+- 부스 안내서(PDF, 1장 요약): https://pungcle33-lab.github.io/gkeb-expo-2027/booth-guide.pdf
+- 상세 제안서(PDF, 6쪽): https://pungcle33-lab.github.io/gkeb-expo-2027/proposal-guide.pdf
 
 문의: 박람회 운영회장 이다늬 · 010-6305-7845 · pungcle33@gmail.com
 
